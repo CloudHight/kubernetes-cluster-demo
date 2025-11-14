@@ -68,7 +68,7 @@ sudo ln -svf /usr/local/bin/aws /usr/bin/aws
 
 # save join command to s3 bucket
 JOIN_COMMAND=$(cat /home/ubuntu/join-command.sh)
-aws s3 cp /home/ubuntu/join-command.sh s3://k8sjoin-bucket1 --region eu-west-3
+aws s3 cp /home/ubuntu/join-command.sh s3://k8sjoin-bucket2 --region eu-west-1
 
 # Install additional tools
 sudo -u ubuntu curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
