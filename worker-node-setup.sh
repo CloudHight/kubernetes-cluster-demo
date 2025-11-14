@@ -52,7 +52,7 @@ sudo ./aws/install
 sudo ln -svf /usr/local/bin/aws /usr/bin/aws
 
 # Retrieve join command from s3 bucket and execute it
-aws s3 cp s3://k8sjoin-bucket1/join-command.sh /home/ubuntu/join-command.sh --region eu-west-3
+aws s3 cp s3://k8sjoin-bucket2/join-command.sh /home/ubuntu/join-command.sh --region eu-west-1
 chmod +x /home/ubuntu/join-command.sh
 
 # Execute the join command as root user
