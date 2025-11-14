@@ -204,7 +204,7 @@ resource "aws_instance" "worker_node" {
 
 # Create s3 bucket for storing join command
 resource "aws_s3_bucket" "s3" {
-  bucket = "k8sjoin-bucket1"
+  bucket = "k8sjoin-bucket2"
   tags = {
     Name        = "My-bucket"
     Environment = "Dev"
@@ -213,7 +213,7 @@ resource "aws_s3_bucket" "s3" {
 
 # Create IAM role for ansible
 resource "aws_iam_role" "k8s-role" {
-  name = "${local.name}-ansible-discovery-role-t1"
+  name = "${local.name}-h8s-role-t1"
   assume_role_policy = jsonencode({
     Version = "2012-10-17",
     Statement = [{
