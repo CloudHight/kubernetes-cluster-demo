@@ -205,6 +205,7 @@ resource "aws_instance" "worker_node" {
 # Create s3 bucket for storing join command
 resource "aws_s3_bucket" "s3" {
   bucket = "k8sjoin-bucket2"
+  force_destroy = true
   tags = {
     Name        = "My-bucket"
     Environment = "Dev"
